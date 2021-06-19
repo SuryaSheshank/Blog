@@ -1,0 +1,40 @@
+<%- include("partials/userheader");-%>
+
+<div class="home">
+  <div class="container-fluid homecomposediv">
+    <p class="homeContent">
+      <%=homeStartingContent%>
+    </p>
+     <a href="/home/compose"><button type="button" class="btn btn-dark composebtn">New Post</button></a>
+  </div>
+</div>
+<div class="body">
+  <div class="container-fluid posts">
+    <%posts.forEach(function(post) {%>
+      <h2><%=post.title%></h2>
+
+            <!-- <posts.body.forEach(function(body)  { -->
+                <a class="postDisplay" href="/posts/<%=post._id%>">
+
+          <%if(post.body.length>=100){%>
+              <%post.body=post.body.substring(0,101)+"..........."%>
+            <%}%>
+              <p>
+              <%=post.body%>
+                </p>
+
+
+          </a>
+
+        <!-- });  -->
+    <%});%>
+
+  </div>
+</div>
+
+
+
+
+
+
+<%- include("partials/footer");-%>

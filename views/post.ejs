@@ -1,0 +1,11 @@
+<%-include("partials/userheader");-%>
+<h1><%=post.title%> </h1>
+<p>
+    <%=post.body%>
+</p>
+<form action="/posts/delete" method="post">
+  <input type="hidden" name="deletePost" value="<%=requestedPostID%>">
+  <button class="btn btn-danger" type="submit" name="button"><i class="fas fa-trash-alt"></i></button>
+</form>
+
+<%-include("partials/footer");-%>

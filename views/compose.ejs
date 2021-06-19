@@ -1,0 +1,24 @@
+<%- include("partials/userheader");-%>
+<h1 class="compose-heading"> New Post </h1>
+<div class="composepage">
+  <form class="" action="/home/compose" method="post">
+  <div class="form-group">
+    <label>Title</label> <br>
+    <!-- <input type="text" name="postTitle" value=""> -->
+    <textarea class="form-control"  rows="1" name="postTitle"></textarea> <br>
+  </div>
+
+
+    <!-- <input type="text" name="composeText" value=""> -->
+    <div class="form-group">
+      <label for>Post</label> <br>
+      <textarea class="form-control" rows="8" name="postBody"></textarea> <br>
+      <button class ="btn btn-primary" type="submit" name="button">Publish</button>
+    </div>
+
+  </form>
+</div>
+
+
+
+<%- include("partials/footer");-%>
