@@ -28,7 +28,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect('mongodb+srv://admin-surya:' + process.env.MongoDB_PW + '@cluster0.el2dx.mongodb.net/blogDB', {
+mongoose.connect('', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: true
